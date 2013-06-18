@@ -95,6 +95,8 @@ class Action(models.Model):
 
     objects = actstream_settings.get_action_manager()
 
+    read = models.BooleanField(default=False)
+
     class Meta:
         ordering = ('-timestamp', )
 
